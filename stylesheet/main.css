@@ -1,0 +1,117 @@
+* {
+    color: white;
+    font-family: 'Chakra Petch', Sans-Serif;
+}
+
+:root {background: #280000}
+
+::selection {
+    color: #777;
+    background: white;
+    text-shadow: 1px 1px 3px #777;
+}
+::-moz-selection {
+    color: #777;
+    background: white;
+    text-shadow: 1px 1px 3px #777;
+}
+
+#container {margin: 20px 0}
+#container #sudoku {
+    margin: 0 auto;
+    position: relative;
+    border-collapse: collapse;
+    transform-origin: top center;
+}
+
+#sudoku tr:nth-child(3n) {border-bottom: 3px solid yellow;}
+#sudoku td:nth-child(3n) {border-right: 3px solid yellow;}
+#sudoku tr:nth-child(1)  {border-top: 3px solid yellow;}
+#sudoku td:nth-child(1)  {border-left: 3px solid yellow;}
+
+#sudoku td {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+}
+
+#sudoku input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    transform: scale(110%);
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Amarna', Sans-Serif;
+    text-align: center;
+    transition: .15s cubic-bezier(.25, 1.5, .7, 2);
+}
+#sudoku input:focus {
+    border: 1px solid white;
+    box-shadow: 0 0 5px white;
+}
+#sudoku input::selection {
+    color: white;
+    background: dodgerblue;
+}
+#sudoku input::-moz-selection {
+    color: white;
+    background: dodgerblue;
+}
+
+#sudoku .input {
+    color: aqua;
+    font-weight: 700;
+    text-shadow: 0 0 5px #0ff;
+}
+#sudoku .input::selection {
+    color: red;
+    background: #280000;
+    text-shadow: 0 0 5px #f00;
+}
+#sudoku .input::-moz-selection {
+    color: red;
+    background: #280000;
+    text-shadow: 0 0 5px #f00
+}
+
+#buttons {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    transform-origin: top center;
+}
+
+#solve {
+    font-size: 25px;
+    border-radius: 5px;
+    background: #FF9549;
+    transition: .9s;
+    box-shadow: 0 0 15px 0 #eee;
+    padding: 10px;
+}
+#solve:hover {
+    background: #98D7FF;
+    box-shadow: none;
+    transform: scale(90%);
+}
+
+#clear {
+    position: absolute;
+    left: calc(100% / 6);
+    transform: translateX(-50%);
+    background: white;
+    color: red;
+    font-size: 20px;
+    border-radius: 3px;
+    padding: 5px;
+}
+#clear:active {
+    background: red;
+    color: white;
+}
