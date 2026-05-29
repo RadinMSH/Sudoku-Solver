@@ -30,7 +30,8 @@ class Solver {
         this.#scores = new Array(9**3+1).fill(0);
         this.#stack = [];
     }
-    
+
+    // Solves the grid (main body)
     solve(board) {
         this.board.length = 0;
         this.board.push(...board.map(cols => [...cols]));
