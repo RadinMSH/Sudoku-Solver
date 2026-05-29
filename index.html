@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sudoku Solver </title>
+        
+        <meta charset=UTF-8 />
+        <meta name="description" content="Solve your Sudoku puzzle with one click!" />
+        <meta name="viewport" content="width = device-width" />
+        
+        <link rel="stylesheet" href="/stylesheet/fonts.css" />
+        <link rel="stylesheet" href="/stylesheet/main.css" />
+    </head>
+    <body>
+        <div id="container"></div>
+        <div id="buttons-wrapper">
+            <div id="buttons">
+                <button id="clear"> Clear </button>
+                <button id="solve"> Solve </button>
+            </div>
+        </div>
+        <p id="message"></p>
+        
+        <script>
+            
+            // Is it hosting on a server??
+            const message = document.querySelector("#message");
+            if (!window.location.protocol.startsWith("http")) {
+                console.warn("You are not running the program on a server\nPlease host it on a local server");
+                message.innerHTML = `
+                    <b>⚠️ Note: </b>This program needs a hosting server to be run.
+                    <br> You can start a <i>localhost</i> on your system if you're trying to run the program.
+                `;
+            }
+            
+        </script>
+        <script type="module" src="sudoku.js"></script>
+        <noscript>
+            Oh oh! I see a problem...
+            <br>
+            Your browser doesn't support <b><i>JavaScript</i></b> language. Try checking <i><q>Site settings</q></i> or changing your browser.
+        </noscript>
+    </body>
+</html>
