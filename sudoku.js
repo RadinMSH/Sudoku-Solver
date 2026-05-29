@@ -7,7 +7,7 @@ it to the solver thread created by the web
 worker.
 */
 
-const worker = new Worker('/solver-worker.js', {type:"module"});
+const worker = new Worker('solver-worker.js', {type:"module"});
 const container = document.querySelector("#container");
 const buttonsWrapper = document.querySelector("#buttons-wrapper");
 const buttons = document.querySelector("#buttons")
