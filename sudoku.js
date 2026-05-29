@@ -124,4 +124,4 @@ const resize = () => {
     buttonsWrapper.style.height = buttons.getBoundingClientRect().height + 'px';
 };
 resize();
-window.onresize = () => window.requestAnimationFrame(resize);
+window.onresize = () => resize();
