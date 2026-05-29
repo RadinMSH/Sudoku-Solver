@@ -7,7 +7,7 @@ animations to prevent blocking and make
 animations smoother.
 */
 
-import {Solver} from '/solver/sat-solver.js';
+import {Solver} from './solver/sat-solver.js';
 
 // Receives the input data (board) from the main thread.
 self.onmessage = e => {
