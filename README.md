@@ -7,9 +7,9 @@ The goal is to run heavy computations on a separate thread so the UI remains smo
 
 ## 📂 Project Structure
 - `index.html` → Main user interface
-- `sudoku.js` → Builds the Sudoku grid and handles events
-- `solver-worker.js` → Runs the solver in a Web Worker
-- `solver/sat-solver.js` → SAT Solver algorithm for Sudoku
+- `src/sudoku.js` → Builds the Sudoku grid and handles events
+- `src/solver-worker.js` → Runs the solver in a Web Worker
+- `src/solver/sat-solver.js` → SAT Solver algorithm for Sudoku
 
 ---
 
